@@ -2,7 +2,7 @@ package com.jian.enums;
 
 public enum VideoStatusEnum {
 	
-	SUCCESS(1),		// 发布成功
+	SUCCESS(3),		// 发布成功
 	FORBID(2);		// 禁止播放，管理员操作
 	
 	public final int value;
