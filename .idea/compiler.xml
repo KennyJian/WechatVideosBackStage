@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="jianvideosdevcommon" />
+        <module name="jianvideosdevmapper" />
+        <module name="jianvideosdevminiapi" />
+        <module name="jianvideosdevpojo" />
+        <module name="jianvideosdevservice" />
+        <module name="mybatisgeneratorConfig" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="demo" target="1.8" />
+      <module name="jian-videos-comment" target="1.8" />
+      <module name="jian-videos-dev" target="1.8" />
+      <module name="jian-videos-dev-common" target="1.8" />
+      <module name="jianvideosdevcommon" target="1.8" />
+      <module name="jianvideosdevmapper" target="1.8" />
+      <module name="jianvideosdevminiapi" target="1.8" />
+      <module name="jianvideosdevpojo" target="1.8" />
+      <module name="jianvideosdevservice" target="1.8" />
+      <module name="mybatisgeneratorConfig" target="1.5" />
+      <module name="test" target="1.8" />
+      <module name="text" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

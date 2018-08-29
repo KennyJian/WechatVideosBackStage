@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/jian-videos-dev.iml" filepath="$PROJECT_DIR$/jian-videos-dev.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jian-videos-dev-common/jianvideosdevcommon.iml" filepath="$PROJECT_DIR$/jian-videos-dev-common/jianvideosdevcommon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jian-videos-dev-mapper/jianvideosdevmapper.iml" filepath="$PROJECT_DIR$/jian-videos-dev-mapper/jianvideosdevmapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jian-videos-dev-mini-api/jianvideosdevminiapi.iml" filepath="$PROJECT_DIR$/jian-videos-dev-mini-api/jianvideosdevminiapi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jian-videos-dev-pojo/jianvideosdevpojo.iml" filepath="$PROJECT_DIR$/jian-videos-dev-pojo/jianvideosdevpojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jian-videos-dev-service/jianvideosdevservice.iml" filepath="$PROJECT_DIR$/jian-videos-dev-service/jianvideosdevservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatisgeneratorConfig/mybatisgeneratorConfig.iml" filepath="$PROJECT_DIR$/mybatisgeneratorConfig/mybatisgeneratorConfig.iml" />
+    </modules>
+  </component>
+</project>
