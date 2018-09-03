@@ -1,6 +1,7 @@
 package com.jian.service;
 
 import com.jian.model.Videos;
+import com.jian.util.PagedResult;
 
 public interface VideoService {
 
@@ -17,4 +18,12 @@ public interface VideoService {
      * @return
      */
     public void updataVideo(String videoId,String coverPath);
+
+    /**
+     * 分页查询视频列表
+     * @param page
+     * @param pageSize
+     * @return
+     */
+    public PagedResult getAllVideos(Integer page,Integer pageSize);
 }

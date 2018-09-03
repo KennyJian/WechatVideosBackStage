@@ -14,4 +14,5 @@ public interface VideosMapper {
     int updateByPrimaryKeySelective(Videos record);
 
     int updateByPrimaryKey(Videos record);
+
 }

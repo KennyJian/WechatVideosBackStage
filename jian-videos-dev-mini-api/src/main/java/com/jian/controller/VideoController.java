@@ -9,6 +9,7 @@ import com.jian.service.VideoService;
 import com.jian.util.FetchVideoCover;
 import com.jian.util.JianJSONResult;
 import com.jian.util.MergeVideoMp3;
+import com.jian.util.PagedResult;
 import io.swagger.annotations.*;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -28,7 +29,7 @@ import java.util.UUID;
 
 @Api(value = "视频相关业务的接口",tags = {"视频相关业务的controller"})
 @RestController
-@RequestMapping(value = "/video",headers = "content-type=multipart/form-data")
+@RequestMapping(value = "/video")
 public class VideoController extends BasicController{
 
 
@@ -201,4 +202,14 @@ public class VideoController extends BasicController{
         videoService.updataVideo(videoId,uploadPathDB);
         return JianJSONResult.ok();
     }
+
+    @PostMapping(value = "/showAll")
+    public JianJSONResult showAll(Integer page){
+        if(page==null){
+            page=1;
+        }
+        PagedResult pagedResult=videoService.getAllVideos(page,PAGE_SIZE);
+        return JianJSONResult.ok(pagedResult);
+    }
+
 }
