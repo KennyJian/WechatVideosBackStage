@@ -55,7 +55,7 @@ public class VideoServiceImpl implements VideoService {
         pagedResult.setPage(page);
         pagedResult.setTotal(pageList.getPages());
         pagedResult.setRecords(pageList.getTotal());
-        pagedResult.setRows(list);1
+        pagedResult.setRows(list);
         return pagedResult;
     }
 }
