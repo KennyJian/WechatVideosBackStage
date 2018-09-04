@@ -8,6 +8,15 @@
   <sql id="Base_Column_List" >
     id, content
   </sql>
+  <select id="selectAll" resultType="String">
+    select content
+    from
+    search_records
+    group by
+    content
+    order by
+    count(content) desc
+  </select>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select 
     <include refid="Base_Column_List" />

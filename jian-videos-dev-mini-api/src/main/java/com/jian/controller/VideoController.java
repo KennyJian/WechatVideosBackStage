@@ -2,7 +2,7 @@ package com.jian.controller;
 
 import com.jian.enums.VideoStatusEnum;
 import com.jian.model.Bgm;
-import com.jian.model.Users;
+import com.jian.model.Comments;
 import com.jian.model.Videos;
 import com.jian.service.BgmService;
 import com.jian.service.VideoService;
@@ -14,10 +14,7 @@ import io.swagger.annotations.*;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
@@ -203,13 +200,30 @@ public class VideoController extends BasicController{
         return JianJSONResult.ok();
     }
 
+
     @PostMapping(value = "/showAll")
-    public JianJSONResult showAll(Integer page){
+    public JianJSONResult showAll(@RequestBody Videos video,Integer isSaveRecord, Integer page){
         if(page==null){
             page=1;
         }
-        PagedResult pagedResult=videoService.getAllVideos(page,PAGE_SIZE);
+        PagedResult pagedResult=videoService.getAllVideos(video,isSaveRecord,page,PAGE_SIZE);
         return JianJSONResult.ok(pagedResult);
+    }
+
+    @PostMapping(value = "/hot")
+    public JianJSONResult hot(){
+        return JianJSONResult.ok(videoService.getHotwords());
+    }
+
+    @PostMapping("/saveComment")
+    public JianJSONResult saveComment(@RequestBody Comments comments){
+        videoService.saveComment(comments);
+        return JianJSONResult.ok();
+    }
+
+    @PostMapping("/getComment")
+    public JianJSONResult getComment(@RequestBody Comments comments){
+        return JianJSONResult.ok();
     }
 
 }

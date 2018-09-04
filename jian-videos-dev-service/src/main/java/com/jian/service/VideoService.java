@@ -1,7 +1,10 @@
 package com.jian.service;
 
+import com.jian.model.Comments;
 import com.jian.model.Videos;
 import com.jian.util.PagedResult;
+
+import java.util.List;
 
 public interface VideoService {
 
@@ -20,10 +23,23 @@ public interface VideoService {
     public void updataVideo(String videoId,String coverPath);
 
     /**
-     * 分页查询视频列表
+     * 分页和搜索查询视频列表
+     * @param video
+     * @param isSaveRecord 1:需要保存 0:不需要保存,或者为空的时候
      * @param page
-     * @param pageSize
      * @return
      */
-    public PagedResult getAllVideos(Integer page,Integer pageSize);
+    public PagedResult getAllVideos(Videos video,Integer isSaveRecord,Integer page,Integer pageSize);
+
+    /**
+     * 获取热门搜索的列表
+     * @return
+     */
+    public List<String> getHotwords();
+
+    /**
+     * 保存评论
+     * @param comments
+     */
+    void saveComment(Comments comments);
 }
